@@ -15,7 +15,7 @@ class Solution:
                 if second == False:
                     return mid
                 elif second == True:
-                    right = mid
+                    right = mid-1
             elif first == False:
                     left = mid+1
             
