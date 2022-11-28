@@ -9,14 +9,9 @@ class Solution:
             mid = (left+right)//2;
             first = isBadVersion(mid)
             if  first == True:
-                second = isBadVersion(mid-1)
-                if mid == n:
-                    return mid
-                if second == False:
-                    return mid
-                elif second == True:
-                    right = mid-1
-            elif first == False:
-                    left = mid+1
+                right = mid-1
+            else:
+                left = mid+1     
+        return left
             
             
