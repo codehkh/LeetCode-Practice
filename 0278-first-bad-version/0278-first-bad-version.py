@@ -7,15 +7,16 @@ class Solution:
         right = n;
         while left <= right:
             mid = (left+right)//2;
-          
-            if isBadVersion(mid) == True:
+            first = isBadVersion(mid)
+            if  first == True:
+                second = isBadVersion(mid-1)
                 if mid == n:
                     return mid
-                if isBadVersion(mid-1) == False:
+                if second == False:
                     return mid
-                elif isBadVersion(mid-1) == True:
+                elif second == True:
                     right = mid
-            elif isBadVersion(mid) == False:
+            elif first == False:
                     left = mid+1
             
             
