@@ -11,11 +11,15 @@ var isAnagram = function(s, t) {
     const arr_s = s.split('').sort()
     const arr_t = t.split('').sort()
 
-    for(let i = 0; i < arr_s.length; i++){
-        if(arr_s[i] !== arr_t[i]){
-            return false
-        }
+    if(JSON.stringify(arr_s) !== JSON.stringify(arr_t))
+    {
+        return false
     }
+    // for(let i = 0; i < arr_s.length; i++){
+    //     if(arr_s[i] !== arr_t[i]){
+    //         return false
+    //     }
+    // }
 
 
     return true
