@@ -4,21 +4,19 @@
  * @return {boolean}
  */
 var isAnagram = function(s, t) {
-    const map = new Map()
-
     if(s.length != t.length){
         return false
     }
-    for(let i = 0; i < s.length; i++){
-        map.set(s[i],i)
-    }
 
-    for(let i = 0; i<t.length; i++){
-        if(!map.has(t[i])){
+    const arr_s = s.split('').sort()
+    const arr_t = t.split('').sort()
+
+    for(let i = 0; i < arr_s.length; i++){
+        if(arr_s[i] !== arr_t[i]){
             return false
         }
-
     }
+
 
     return true
 };
